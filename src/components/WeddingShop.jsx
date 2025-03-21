@@ -52,7 +52,7 @@ export default function WeddingShop() {
     const generateQRCode = async () => {
         const totalAmount = getTotal();
         if (totalAmount > 0) {
-            const upiLink = `upi://pay?pa=rockshaban786-1@okicici&pn=Shaban and Farhin&am=${totalAmount}&cu=INR`;
+            const upiLink = `upi://pay?pa=kathy.sphinx25@okhdfcbank&pn=Shaban and Farhin&am=${totalAmount}&cu=INR`;
             try {
                 const url = await QRCode.toDataURL(upiLink);
                 setQrCodeUrl(url);
