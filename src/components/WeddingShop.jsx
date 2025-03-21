@@ -30,7 +30,7 @@ const products = [
     { id: 9, name: 'REC', price: 430, image: RECImage },
     { id: 10, name: 'HDFC', price: 1760, image: hdfcImage },
     { id: 10, name: 'AMAZON', price: 1000, image: amazonImage },
-    { id: 10, name: 'FLIPKART', price: 1001, image: myntraImage },
+    { id: 10, name: 'MYNTRA', price: 1001, image: myntraImage },
 ];
 
 export default function WeddingShop() {
@@ -192,7 +192,7 @@ export default function WeddingShop() {
                 <h3>Thank you!</h3>
                 <p>We're overwhelmed with gratitude!</p>
                 <p>Thank you for choosing to celebrate our special day with a gift from our registry. Your generosity and thoughtfulness mean the world to us.</p>
-                <p>Your gift will be a constant reminder of your love and support as we start our new life together. We can't wait to create unforgettable memories with the [gift name] you've given us!</p>
+                <p>Your gift will be a constant reminder of your love and support as we start our new life together. We can't wait to create unforgettable memories with the gifts you've given us!</p>
                 <p>Thank you again for your kindness and for being part of our journey.</p>
                 <p>With love and appreciation,</p>
                 <p><strong>Shaban & Farhin</strong></p>
