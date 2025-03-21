@@ -52,7 +52,7 @@ export default function WeddingShop() {
     const generateQRCode = async () => {
         const totalAmount = getTotal();
         if (totalAmount > 0) {
-            const upiLink = `upi://pay?pa=anasyaseen1022-1@okhdfcbank&pn=Anas Yaseen&am=${totalAmount}&cu=INR`;
+            const upiLink = `upi://pay?pa=rockshaban786-1@okicici&pn=Shaban and Farhin&am=${totalAmount}&cu=INR`;
             try {
                 const url = await QRCode.toDataURL(upiLink);
                 setQrCodeUrl(url);
@@ -99,7 +99,7 @@ export default function WeddingShop() {
         Total: ₹${getTotal()}
         `;
 
-        const phoneNumber = '918770748106';  // Replace with the recipient's WhatsApp number
+        const phoneNumber = '919644898606';  // Replace with the recipient's WhatsApp number
         const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
         window.open(whatsappLink, '_blank');
