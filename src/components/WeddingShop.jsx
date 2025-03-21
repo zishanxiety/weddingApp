@@ -15,18 +15,22 @@ import wabagImage from '../assets/wabag.png';
 import zincImage from '../assets/zinc.png';
 import RECImage from '../assets/REC.png';
 import hdfcImage from '../assets/hdfc.png';
+import amazonImage from '../assets/amazon.png';
+import myntraImage from '../assets/myntra.png';
 
 const products = [
-    { id: 1, name: 'Balrampur', price: 2000, image: balrampurImage },
-    { id: 2, name: 'Chambal', price: 1500, image: chambalImage },
-    { id: 3, name: 'ICICI', price: 5000, image: iciciImage },
-    { id: 4, name: 'IHC', price: 5000, image: IHCImage },
-    { id: 5, name: 'MAHINDRA', price: 5000, image: mahindraImage },
-    { id: 6, name: 'RELIANCE', price: 5000, image: relianceImage },
-    { id: 7, name: 'WABAG', price: 5000, image: wabagImage },
-    { id: 8, name: 'ZINC', price: 5000, image: zincImage },
-    { id: 9, name: 'REC', price: 5000, image: RECImage },
-    { id: 10, name: 'HDFC', price: 5000, image: hdfcImage },
+    { id: 1, name: 'Balrampur', price: 530, image: balrampurImage },
+    { id: 2, name: 'Chambal', price: 600, image: chambalImage },
+    { id: 3, name: 'ICICI', price: 1340, image: iciciImage },
+    { id: 4, name: 'IHC', price: 820, image: IHCImage },
+    { id: 5, name: 'MAHINDRA', price: 2800, image: mahindraImage },
+    { id: 6, name: 'RELIANCE', price: 1270, image: relianceImage },
+    { id: 7, name: 'WABAG', price: 1490, image: wabagImage },
+    { id: 8, name: 'ZINC', price: 440, image: zincImage },
+    { id: 9, name: 'REC', price: 430, image: RECImage },
+    { id: 10, name: 'HDFC', price: 1760, image: hdfcImage },
+    { id: 10, name: 'AMAZON', price: 1000, image: amazonImage },
+    { id: 10, name: 'FLIPKART', price: 1001, image: myntraImage },
 ];
 
 export default function WeddingShop() {
@@ -93,14 +97,6 @@ export default function WeddingShop() {
         Cart: 
         ${cartDetails}
         Total: ₹${getTotal()}
-            
-        Thank you so much for the generous gift!
-        We're overwhelmed with gratitude!
-        Thank you for choosing to celebrate our special day with a gift from our registry. Your generosity and thoughtfulness mean the world to us.
-        Your gift will be a constant reminder of your love and support as we start our new life together. We can't wait to create unforgettable memories with the gift you've given us!
-        Thank you again for your kindness and for being part of our journey.
-        With love and appreciation,
-        Shaban & Farhin
         `;
 
         const phoneNumber = '918770748106';  // Replace with the recipient's WhatsApp number
@@ -116,7 +112,7 @@ export default function WeddingShop() {
         <div className="container">
             <div className="welcome-note">
                 <h2>Welcome to our wedding registry!</h2>
-                <p>Mohammad and Farhin are thrilled to share this special moment with you. We're grateful for your love and support as we begin our new journey together.</p>
+                <p>Shaban and Farhin are thrilled to share this special moment with you. We're grateful for your love and support as we begin our new journey together.</p>
                 <p>We've curated this registry to include items that will help us build our new life. Your gift will not only bring us joy but also help us create cherished memories.</p>
                 <p>Thank you for celebrating with us!</p>
                 <p><strong>Love, Shaban & Farhin</strong></p>
@@ -190,6 +186,16 @@ export default function WeddingShop() {
                 <Button className="generate-qr-button" onClick={generateQRCode}>
                     Generate QR Code
                 </Button>
+            </div>
+
+            <div className="welcome-note">
+                <h3>Thank you!</h3>
+                <p>We're overwhelmed with gratitude!</p>
+                <p>Thank you for choosing to celebrate our special day with a gift from our registry. Your generosity and thoughtfulness mean the world to us.</p>
+                <p>Your gift will be a constant reminder of your love and support as we start our new life together. We can't wait to create unforgettable memories with the [gift name] you've given us!</p>
+                <p>Thank you again for your kindness and for being part of our journey.</p>
+                <p>With love and appreciation,</p>
+                <p><strong>Shaban & Farhin</strong></p>
             </div>
 
         </div>
