@@ -40,6 +40,7 @@ export default function WeddingShop() {
     const [name, setName] = useState('');
     const [relation, setRelation] = useState('');
     const [paymentMade, setPaymentMade] = useState(false);
+    const [copied, setcopied] = useState(false);
 
     const addToCart = (product) => {
         setCart([...cart, product]);
@@ -58,6 +59,7 @@ export default function WeddingShop() {
                 setQrCodeUrl(url);
                 setShowQRCode(true);
                 setPaymentMade(false);
+                
             } catch (error) {
                 console.error('Error generating QR code:', error);
             }
@@ -70,6 +72,14 @@ export default function WeddingShop() {
     const confirmPayment = () => {
         setPaymentMade(true);
         alert('Payment confirmed successfully!');
+    };
+    const copyToClipboard = () => {
+        navigator.clipboard.writeText('kathy.sphinx25@okhdfcbank')
+            .then(() => {
+                setcopied(true);
+                setTimeout(() => setcopied(false), 2000);
+            })
+            .catch(err => console.error("Failed to copy:", err));
     };
 
     const sendWhatsAppMessage = () => {
@@ -178,6 +188,11 @@ export default function WeddingShop() {
                 {showQRCode && (
                     <div className="qr-code-container">
                         <img src={qrCodeUrl} alt="QR Code" className="qr-code" />
+                        <div className="upi-container">
+                            <span className="upi-text">{'anasyaseen1022-1@okhdfcbank'}</span>
+                            <button onClick={copyToClipboard} className="copy-button">📋 Copy</button>
+                        </div>
+                        {copied && <span className="copied-message">Copied!</span>}
                         <Button className="payment-button" onClick={confirmPayment}>
                             Confirm Payment
                         </Button>
