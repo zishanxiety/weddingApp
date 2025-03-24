@@ -189,7 +189,7 @@ export default function WeddingShop() {
                     <div className="qr-code-container">
                         <img src={qrCodeUrl} alt="QR Code" className="qr-code" />
                         <div className="upi-container">
-                            <span className="upi-text">{'anasyaseen1022-1@okhdfcbank'}</span>
+                            <span className="upi-text">{'kathy.sphinx25@okhdfcbank'}</span>
                             <button onClick={copyToClipboard} className="copy-button">📋 Copy</button>
                         </div>
                         {copied && <span className="copied-message">Copied!</span>}
