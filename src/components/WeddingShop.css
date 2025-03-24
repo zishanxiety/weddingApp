@@ -132,10 +132,10 @@ button:hover {
     justify-content: space-between; /* Ensures even spacing */
     gap: 0.5rem;
     background: #f5f5f5;
-    padding: 0.75rem;
+    padding: 0.6rem 1rem;
     border-radius: 5px;
-    width: 100%; /* Ensures it spans the container */
-    max-width: 350px; /* Prevents it from stretching too much */
+    width: 100%;
+    max-width: 320px; /* Adjusts container width */
     box-sizing: border-box;
 }
 
@@ -143,55 +143,42 @@ button:hover {
     font-size: 1rem;
     font-weight: bold;
     color: #333;
-    overflow-wrap: break-word; /* Prevents long text from overflowing */
+    word-break: break-all; /* Prevents overflow issues */
 }
-
-/* Ensure proper alignment on mobile */
-@media (max-width: 480px) {
-    .upi-container {
-        flex-direction: row;
-        justify-content: center;
-        gap: 0.3rem;
-        padding: 0.5rem;
-        max-width: 280px; /* Adjust width for small screens */
-    }
-
-    .upi-text {
-        font-size: 0.9rem; /* Reduce text size slightly */
-    }
-}
-
 
 .copy-button {
     background: #ffffff;
     color: rgb(0, 0, 0);
     border: none;
-    padding: 0.25rem 0.6rem; /* Slightly reduced padding */
-    font-size: 0.8rem; /* Smaller font size for compact design */
+    padding: 0.3rem 0.7rem;
+    font-size: 0.8rem;
     cursor: pointer;
     border-radius: 5px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.3rem;
+    transition: background 0.3s ease;
+    white-space: nowrap; /* Prevents wrapping */
 }
 
-/* Add subtle hover and active effects */
-.copy-button:hover {
-    background: #f0f0f0;
-}
-
-.copy-button:active {
-    transform: scale(0.95); /* Adds a click effect */
-}
-
-/* Ensure better responsiveness */
+/* ✅ Fix alignment issues for mobile */
 @media (max-width: 480px) {
+    .upi-container {
+        flex-direction: row; /* Ensures horizontal layout */
+        justify-content: space-between;
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .upi-text {
+        font-size: 0.9rem;
+        text-align: left;
+        flex: 1; /* Allows text to take available space */
+    }
+
     .copy-button {
-        padding: 0.2rem 0.5rem; /* Further reduce padding for small screens */
-        font-size: 0.75rem; /* Reduce font size for compact display */
+        padding: 0.2rem 0.5rem;
+        font-size: 0.75rem;
     }
 }
+
 
 
 
