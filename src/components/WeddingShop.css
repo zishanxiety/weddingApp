@@ -170,11 +170,20 @@ button:hover {
     background: #fffaf0e6;
     border: 2px solid #d4a373;
     border-radius: 1rem;
-    width: 100%;
+    width: 90%; /* Adjusted width for better responsiveness */
     max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto; /* Ensures perfect centering */
+    box-sizing: border-box;
 }
+
+/* Ensure better alignment on small screens */
+@media (max-width: 480px) {
+    .cart-section {
+        width: 95%; /* Slightly increase width for better layout */
+        padding: 1.5rem; /* Reduce padding to avoid content overflow */
+    }
+}
+
 
 .cart-item {
     font-size: 1.25rem;
@@ -195,16 +204,27 @@ button:hover {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    margin-top: 2rem;
+    margin-top: 4rem; /* Reduce margin-top to create proper spacing */
     padding: 2rem;
     background: rgba(255, 245, 235, 0.9);
     border: 2px solid #d4a373;
     border-radius: 1rem;
-    width: 100%;
+    width: 90%;
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
+    box-sizing: border-box;
 }
+
+/* Adjust spacing on mobile screens */
+@media (max-width: 480px) {
+    .form-container {
+        margin-top: 2rem; /* Reduce spacing on small screens */
+        padding: 1.5rem;
+    }
+}
+
+
 
 .input-field {
     width: 100%;
